@@ -15,7 +15,10 @@ const WhatsappButton = ({ logo, phone, message, width, height }: Props) => {
 
   return (
     <>
-      <div className="fixed bottom-2 right-2 flex flexColumn">
+      <div
+        className="fixed bottom-2 right-2 flex flexColumn"
+        style={{ marginBottom: 90 }}
+      >
         <a
           href={`https://wa.me/${phone}?text${formattedMessage}`}
           target="_blank"
@@ -34,6 +37,7 @@ WhatsappButton.propTypes = {
   message: PropTypes.string,
   width: PropTypes.number,
   height: PropTypes.number,
+  marginBottom: PropTypes.number,
 }
 
 WhatsappButton.defaultProps = {
